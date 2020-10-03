@@ -31,7 +31,10 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 
-# vagrant runtime
+tests/_output/*
+tests/_support/_generated
+
+#vagrant folder
 /.vagrant
 
 # ignore generated files
@@ -41,3 +44,12 @@ phpunit.phar
 /backend/web/index.php
 /backend/web/index-test.php
 /backend/web/robots.txt
+
+/api/web
+/assets/web
+/components
+/p2made
+
+/z_advanced
+/z_gitignore
+/z_scratch
