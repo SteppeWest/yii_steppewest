@@ -6,15 +6,22 @@
  * #####                                                           #####
  * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
  */
-$_urlBase = 'a6e-dev.dev';
+$_urlBase = 'steppewest.localhost';
 $_urlBaseFrontend = 'http://'         . $_urlBase;
-$_urlBaseBackend  = 'http://backend.' . $_urlBase;
-$_urlBaseMembers  = 'http://members.' . $_urlBase;
-$_urlBaseMidend   = 'http://midend.'  . $_urlBase;
+$_urlBaseBackend  = 'http://hq.' . $_urlBase;
+//$_urlBaseMembers  = 'http://members.' . $_urlBase;
+//$_urlBaseMidend   = 'http://midend.'  . $_urlBase;
 $_urlBaseAssets   = 'http://static.'  . $_urlBase;
 $_urlBaseApi      = 'http://api.'     . $_urlBase;
 
 return [
+	'aliases' => [
+		'@bower'    => '@vendor/bower-asset',
+		'@npm'      => '@vendor/npm-asset',
+		'@p2m'      => '@vendor/p2made',
+		'@jsdelivr' => 'https://cdn.jsdelivr.net/npm',
+		'@cdnjs'    => 'https://cdnjs.cloudflare.com/ajax/libs',
+	],
 	'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
 	'components' => [
 		// NOTE: in the yii2-advanced-app, the user component should be updated in
@@ -36,12 +43,20 @@ return [
 				'yii\bootstrap\BootstrapPluginAsset' => [
 					'sourcePath' => null, 'js' => [],
 				],
+				'yii\bootstrap4\BootstrapAsset' => [
+					'sourcePath' => null, 'css' => [],
+				],
+				'yii\bootstrap4\BootstrapPluginAsset' => [
+					'sourcePath' => null, 'js' => [],
+				],
 				'yii\jui\JuiAsset' => [
 					'sourcePath' => null, 'css' => [], 'js' => [],
 				],
+/*
 				'\rmrevin\yii\fontawesome\AssetBundle' => [
 					'sourcePath' => null, 'css' => [],
 				],
+*/
 			],
 		],
 		'urlManager' => [
@@ -49,10 +64,12 @@ return [
 			'showScriptName' => false,
 			'suffix' => '.p2m',
 			'rules' => [
+				'<action>'=>'site/<action>',
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-				'<view:[a-zA-Z0-9-]+>/'=>'site/page',
+				//'<view:[a-zA-Z0-9-]+>/'=>'site/page',
+				'<alias:\w+>' => 'site/<alias>',
 			]
 		],
 		'urlManagerFrontEnd' => [
@@ -63,6 +80,11 @@ return [
 			'class' => 'yii\web\urlManager',
 			'baseUrl' => $_urlBaseBackend,
 		],
+		'urlManagerAssets' => [
+			'class' => 'yii\web\urlManager',
+			'baseUrl' => $_urlBaseAssets,
+		],
+/*
 		'urlManagerMembers' => [
 			'class' => 'yii\web\urlManager',
 			'baseUrl' => $_urlBaseMembers,
@@ -71,14 +93,11 @@ return [
 			'class' => 'yii\web\urlManager',
 			'baseUrl' => $_urlBaseMidend,
 		],
-		'urlManagerAssets' => [
-			'class' => 'yii\web\urlManager',
-			'baseUrl' => $_urlBaseAssets,
-		],
 		'urlManagerApi' => [
 			'class' => 'yii\web\urlManager',
 			'baseUrl' => $_urlBaseApi,
 		],
+*/
 		'cache' => [
 			'class' => 'yii\caching\FileCache',
 		],

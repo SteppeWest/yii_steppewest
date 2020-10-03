@@ -7,7 +7,8 @@ $params = array_merge(
 );
 
 return [
-	'id' => 'app-frontend',
+	'id' => 'yii-development-frontend',
+	'name' => 'Yii Development',
 	'basePath' => dirname(__DIR__),
 	'controllerNamespace' => 'frontend\controllers',
 	'bootstrap' => ['log'],
@@ -20,6 +21,15 @@ return [
 			'identityClass' => 'common\models\User',
 			'enableAutoLogin' => true,
 			'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+		],
+		'view' => [
+			'theme' => [
+				'basePath' => '@vendor/p2m/yii2-p2y2-things-demo/views',
+				'baseUrl' => '@vendor/p2m/yii2-p2y2-things-demo/views',
+				'pathMap' => [
+					'@frontend/views' => '@vendor/p2m/yii2-p2y2-things-demo/views',
+				],
+			],
 		],
 		'session' => [
 			// this is the name of the session cookie used for login on the frontend
