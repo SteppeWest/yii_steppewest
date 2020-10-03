@@ -1,0 +1,24 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Pedro Plowman
+N:Plowman;Pedro;;;
+item1.EMAIL;TYPE=INTERNET:pedro@steppewest.com
+item1.X-ABLabel:
+item2.TEL:+61 400 473 376
+item2.X-ABLabel:
+item3.ORG:Steppe West
+item3.X-ABLabel:
+item4.URL:https\://medium.com/steppe-west
+item4.X-ABLabel:Medium
+item5.URL:https\://www.facebook.com/SteppeWest/
+item5.X-ABLabel:Facebook
+item6.URL:https\://twitter.com/SteppeWest
+item6.X-ABLabel:Twitter
+item7.URL:https\://www.instagram.com/Steppe.West/
+item7.X-ABLabel:Instagram
+item8.URL:https\://www.youtube.com/channel/UCQAZOZEGExKLjOLsEgHxMLQ
+item8.X-ABLabel:YouTube
+item9.URL:https\://vk.com/pedrofp
+item9.X-ABLabel:VK
+CATEGORIES:myContacts
+END:VCARD

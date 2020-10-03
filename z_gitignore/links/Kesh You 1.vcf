@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//macOS 11.0//EN
+N:;;;;
+FN:Kesh You
+ORG:Kesh You;
+EMAIL;type=INTERNET;type=pref:keshyouofficial@gmail.com
+TEL;type=pref:+7 701 750 5046
+ADR;type=pref:;;;;;;KZ
+item1.URL;type=pref:https://www.youtube.com/c/KeshYouOfficial
+item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL:https://www.instagram.com/keshyou_official/
+item2.X-ABLabel:_$!<HomePage>!$_
+X-ABShowAs:COMPANY
+END:VCARD

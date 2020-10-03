@@ -1,0 +1,14 @@
+judges
+Nurlan Abdullin	Kazakhstan
+Gulnur Satylganova	Kyrgyzstan
+Sitora Farmonova	Uzbekistan
+Alovuddin Abdullayev	Tajikistan
+
+hosts
+Kumar Lukmanov
+Yerkebulan Myrzabek
+Erkin Ryskulbekov
+Bekhruz Nasriddinov
+Timur Aliyev
+
+

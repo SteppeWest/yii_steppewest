@@ -1,0 +1,12 @@
+{
+    "name": "denis909/yii2-glyphicons",
+    "license": "MIT",
+    "require": {
+        "bower-asset/glyphicons": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "denis909\\yii\\": ""
+        }
+    }
+}
